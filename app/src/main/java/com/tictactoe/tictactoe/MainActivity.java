@@ -1,16 +1,15 @@
-package com.example.tictactoe;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+package com.tictactoe.tictactoe;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TableLayout;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import tictactoe.tictactoe.R;
 
 @SuppressLint("SetTextI18n")
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -145,7 +144,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        outState.putInt("roundCount", roundCount);
         outState.putInt("player1Points", player1Points);
         outState.putInt("player2Points", player2Points);
         outState.putBoolean("player1Turn",player1Turn);
@@ -155,7 +153,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
 
-        roundCount = savedInstanceState.getInt("roundCount");
         player1Points = savedInstanceState.getInt("player1Points");
         player2Points = savedInstanceState.getInt("player2Points");
         player1Turn = savedInstanceState.getBoolean("player1Turn");
