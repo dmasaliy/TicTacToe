@@ -1,4 +1,4 @@
-package com.tictactoe.tictactoe;
+package com.door.tictactoe;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
